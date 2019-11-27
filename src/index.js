@@ -66,7 +66,15 @@ function Square(props) {
         history: history.concat([{
           squares: squares,
         }]),
+        stepNumber: 0,
         xIsNext: !this.state.xIsNext,
+      });
+    }
+
+    jumpTo(step) {
+      this.setState({
+        stepNumber: step,
+        xIsNext: (step % 2) === 0,
       });
     }
 
