@@ -64,7 +64,7 @@ function Square(props) {
       squares[i] = this.state.xIsNext ? 'X' : 'O';
       this.setState({
         history: history.concat([{
-          squares: squares.concat,
+          squares: squares,
         }]),
         xIsNext: !this.state.xIsNext,
       });
